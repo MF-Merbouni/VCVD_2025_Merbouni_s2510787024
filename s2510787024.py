@@ -5,7 +5,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-
 # we start by loading and reading the coefficients in the tables from an excel file 
 
 filePath = 'Tyre_coefficients.xlsx'
@@ -71,6 +70,8 @@ def calculate_fy(load_kn=0.0, slip_angle=0.0, coeff=None, friction_mu=1.0):
     # Sh and Sv (Shifts) 
     horizontal_shift = coeff.get('a9', 0) * camber_gamma
     vertical_shift = (coeff.get('a10', 0) * (load_kn**2) + coeff.get('a11', 0) * load_kn) * camber_gamma
+    
+    # Formulas for D, C, B, E
     
     # Peak Factor (D) 
     D_PeakFactor = ((coeff['a1'] * (load_kn**2)) + (coeff['a2'] * load_kn)) * friction_mu
