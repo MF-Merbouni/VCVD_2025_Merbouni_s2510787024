@@ -17,7 +17,7 @@ To run this project, you need Python installed along with:
 ## Installation & Usage
 Run the script from your terminal using this format:
 
-python s2510787024.py slip_angle_degrees weight_kg friction_mu
+` >> python s2510787024.py slip_angle  weight_kg  friction_mu `
 
 ## Execution Example
 `plot_2.0_1500.0_0.2.png`
